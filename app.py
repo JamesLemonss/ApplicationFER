@@ -10,6 +10,7 @@ from PIL import Image, ImageSequence
 import json
 import os
 
+
 app = Flask(__name__)
 
 # Load model
@@ -46,14 +47,14 @@ emotion_colors = {
 
 # Inside Out character mapping
 inside_out_characters = {
-    "Neutral": "static/gifs/Neutral.gif",      # You can use a calm character
-    "Happy": "static/gifs/Happy.gif",            # Joy
-    "Surprise": "static/gifs/Surprise.gif",    # Could be Joy or custom
-    "Sad": "static/gifs/Sad.gif",          # Sadness
-    "Angry": "static/gifs/Angry.gif",          # Anger
-    "Disgust": "static/gifs/Disgust.gif",      # Disgust
-    "Fear": "static/gifs/Fear.gif",            # Fear
-    "Contempt": "static/gifs/Contempt.gif"     # Could be Disgust or custom
+    "Neutral": "static//Neutral.gif",      # You can use a calm character
+    "Happy": "static//Happy.gif",            # Joy
+    "Surprise": "static//Surprise.gif",    # Could be Joy or custom
+    "Sad": "static//Sad.gif",          # Sadness
+    "Angry": "static//Angry.gif",          # Anger
+    "Disgust": "static//Disgust.gif",      # Disgust
+    "Fear": "static//Fear.gif",            # Fear
+    "Contempt": "static//Contempt.gif"     # Could be Disgust or custom
 }
 
 class GIFLoader:
