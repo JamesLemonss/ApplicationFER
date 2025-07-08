@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Emotion Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ONNX.js Runtime -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.16.3/dist/ort.min.js"></script>
+    
+    <!-- MediaPipe for face detection -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675465747/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6.1629159505/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1620248257/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection@0.4.1646425229/face_detection.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎭 Real-time Emotion Recognition</h1>
+        
+        <div class="video-container">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="canvas"></canvas>
+            <div id="loading">Loading AI model...</div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn">Start Camera</button>
+            <button id="stopBtn" disabled>Stop Camera</button>
+        </div>
+        
+        <div class="info">
+            <p> Click "Start Camera" to begin emotion detection!</p>
+            <p> Watch as Inside Out characters appear based on your emotions</p>
+            <p> Emotion probabilities are displayed in real-time</p>
+        </div>
+        
+        <div class="emotion-legend">
+            <div class="emotion-item">
+                <span class="color-box neutral"></span>
+                Neutral
+            </div>
+            <div class="emotion-item">
+                <span class="color-box happy"></span>
+                Happy
+            </div>
+            <div class="emotion-item">
+                <span class="color-box surprise"></span>
+                Surprise
+            </div>
+            <div class="emotion-item">
+                <span class="color-box sad"></span>
+                Sad
+            </div>
+            <div class="emotion-item">
+                <span class="color-box angry"></span>
+                Angry
+            </div>
+            <div class="emotion-item">
+                <span class="color-box disgust"></span>
+                Disgust
+            </div>
+            <div class="emotion-item">
+                <span class="color-box fear"></span>
+                Fear
+            </div>
+            <div class="emotion-item">
+                <span class="color-box contempt"></span>
+                Contempt
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
